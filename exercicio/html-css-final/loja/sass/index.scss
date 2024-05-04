@@ -1,0 +1,86 @@
+
+$columns: 12;
+$gap: 12px;
+
+@for $i from 1 through $columns{
+    .col-lg-#{$i}{
+        width: calc(100% / $columns * $i - $gap);
+    }
+}
+
+@mixin flex{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header{
+    @include flex;
+    height: 64px;
+    background-color: red;
+}
+
+.container{
+    @include flex;
+    width: 100%;
+}
+
+.nav__menu__links{
+    display: inline-block;
+}
+
+.hero__section{
+    display: flex;
+    align-items: flex-end;
+    height: calc(100dvh - 64px);
+    width: 100%;
+    background-image: url(/html-css/exercicio/html-css-final/loja/assets/splash-screen.webp);
+}
+
+.product__categories__single{
+    min-height: 110px;
+
+}
+
+.product__categories__single:nth-child(1){
+    background-image: url(/html-css/exercicio/html-css-final/loja/assets/category-seating.webp);
+}
+.product__categories__single:nth-child(2){
+    background-image: url(/html-css/exercicio/html-css-final/loja/assets/category-bedroom.webp);
+    
+}
+.product__categories__single:nth-child(3){
+    background-image: url(/html-css/exercicio/html-css-final/loja/assets/category-outdoor.webp);
+}
+
+.product__categories__single:nth-child(4){
+    background-image: url(/html-css/exercicio/html-css-final/loja/assets/category-rugs.webp);
+}
+
+.product__categories__single:nth-child(5){
+    background-image: url(/html-css/exercicio/html-css-final/loja/assets/category-storage.webp);
+}
+
+.product__categories__single:nth-child(6){
+    background-image: url(/html-css/exercicio/html-css-final/loja/assets/category-tables.webp);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+    @for $i from 1 through 3 {
+        .col-lg-#{$i}{
+            width: 100%;
+        }
+    }
+}

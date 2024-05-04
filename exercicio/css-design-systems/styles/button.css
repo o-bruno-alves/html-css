@@ -1,0 +1,78 @@
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    gap: 10px;
+    border: 0;
+    border-radius: 4px;
+    padding: 1px 16px 1px 16px;
+}
+
+.btn--type {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.btn--sub--type{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn--primary{
+    background-color: #005FB2;
+    color: #ffffff;
+}
+
+.btn--primary[disabled] {
+    background-color: #C9C7C5;
+}
+
+.btn--secundary{
+    background-color: #ffffff;
+    color: #0070D2;
+    border: 1px solid #0070D2;
+}
+
+.btn--secundary[disabled] {
+    background-color: #ffffff;
+    color: #DDDBDA;
+    border: 0;
+}
+
+.btn--danger{
+    background-color: #C23934;
+    color: #ffffff;
+}
+
+.btn--danger[disabled] {
+    background-color: #C9C7C5;
+}
+
+.btn--success{
+    background-color: #4BCA81;
+    color: #ffffff;
+}
+
+.btn--success[disabled] {
+    background-color: #C9C7C5;
+}
+
+
+.btn svg {
+    width: 16px;
+}
+
+/*.btn:hover {
+    background: red;
+    cursor: pointer;
+}
+
+.btn:active {
+    box-shadow: 10px 10px 1px black;
+}*/
+

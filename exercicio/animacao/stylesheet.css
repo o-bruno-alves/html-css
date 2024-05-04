@@ -1,0 +1,115 @@
+
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    --translate-positive: 20px;
+    --translate-negative:-20px;
+}
+
+
+body{
+    margin: 0;
+    padding: 16px 16px;
+    background: red;
+    color: white;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 32px 0;
+    display: grid;
+    place-items: center;
+}
+
+
+/* Animation 1 */
+.perspective{
+    background: black;
+    width: 100px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skew(-45deg, 0deg) translate(0px, 10px);
+    border-radius: 4px;
+    animation: translate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes translate{
+    100% {
+        transform:skew(-45deg, 0deg)  translate(20px, 30px);
+        box-shadow: 20px 20px 10px 5px #4801016b;
+    }
+}
+
+
+/* ANIMATION 2 */
+
+
+
+/* ANIMATION 3 */
+
+.balls{
+    background: yellow;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: grid;
+    place-items:center;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+.child--circle{
+    width: 16px;
+    height: 16px;
+    background: blue;
+    border-radius: 100%;
+    position: absolute;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.child--circle:nth-child(1){
+    transform: translate(var(--translate-negative), var(--translate-negative));
+    background: orange;
+}
+
+.child--circle:nth-child(2){
+    transform: translate(var(--translate-positive), var(--translate-negative));
+    background: pink;
+}
+
+.child--circle:nth-child(3){
+    transform: translate(var(--translate-negative), var(--translate-positive));
+    background: green;
+}
+
+.child--circle:nth-child(4){
+    transform: translate(var(--translate-positive), var(--translate-positive));
+    background: purple;
+}
+
+@keyframes move {
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
+
+/* ANIMATION 4 */

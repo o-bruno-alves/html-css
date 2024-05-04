@@ -1,0 +1,39 @@
+button{
+    background: red;
+}
+ .card{
+    display: flex;
+    &__header{
+        background: red;
+    }
+ }
+ 
+ @mixin flex ($justify-content, $align-items){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: center;
+    gap: 12px;
+}
+.container {
+    @include flex(space-between, flex-start);
+}
+
+$columns: 12;
+$gap: 12px;
+
+@for $i from 1 through $columns{
+    .col-lg-#{$i}{
+        width: calc(100% / $columns * $i - $gap);
+    }
+
+
+}
+
+@media screen and (max-width: 768px){
+    @for $i from 1 through 3 {
+        .col-lg-#{$i}{
+            width: 100%;
+        }
+    }
+}
+

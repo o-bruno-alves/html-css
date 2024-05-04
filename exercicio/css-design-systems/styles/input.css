@@ -1,0 +1,76 @@
+.form--fields--type{
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+}
+
+.form--noicon {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+form input:disabled{
+    background-color: #ECEBEA;
+}
+
+label, input {
+    display: block;
+    width: 220px;
+}
+
+label{
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    
+}
+
+input{
+    background-color: #fafafa;
+    color: #706E6B;
+    height: 32px;
+    border:0;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    outline: none;
+}
+
+::placeholder {
+    color: #706E6B;
+    padding: 8px;
+}
+
+.form--focus input:focus{
+    background-color: white;
+    outline: none;
+    box-shadow: 0 0 5px #1589EE;
+    border: 1px solid #1589EE;
+
+}
+
+.form--error p{
+    display: none;
+}
+
+.form--error input:has(+p){
+    margin: 0px;
+    font-size: 12px;
+    color: #C23934;
+}
+
+.form--error input:has(+p)~p{
+    display: block;
+    margin: 4px 0 16px 0;
+    font-size: 12px;
+    color: #C23934;
+}
+
+.form--error input:invalid{
+    background-color: white;
+    outline: none;
+    box-shadow: 0 0 5px #C23934;
+    border: 1px solid #C23934;
+    
+}
+
