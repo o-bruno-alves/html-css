@@ -48,6 +48,60 @@ body{
 
 /* ANIMATION 2 */
 
+.progress{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.progress__bar{
+    height: 8px;
+    border-radius: 8px;
+    background: blueviolet;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress__bar::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: yellow;
+    animation-fill-mode: forwards;
+    animation-name: fill;
+    animation-duration: 2s;
+    animation-direction: alternate;
+}
+
+@keyframes fill {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.progress__bar:nth-child(1)::after{
+    animation-delay: 0s;
+}
+
+.progress__bar:nth-child(2)::after{
+    animation-delay: 2s;
+}
+
+.progress__bar:nth-child(3)::after{
+    animation-delay: 4s;
+}
+
+.progress__bar:nth-child(4)::after{
+    animation-delay: 6s;
+}
+
 
 
 /* ANIMATION 3 */
@@ -113,3 +167,89 @@ body{
 
 
 /* ANIMATION 4 */
+
+.letters {
+    display: flex;
+    gap: 12px;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.typo{
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 5px);
+    }
+
+}
+
+.typo:nth-child(1){
+    animation-delay: 0.5s;
+}
+
+.typo:nth-child(2){
+    animation-delay: 1s;
+}
+
+.typo:nth-child(3){
+    animation-delay: 1.5s;
+}
+
+.typo:nth-child(4){
+    animation-delay: 2s;
+}
+
+.typo:nth-child(5){
+    animation-delay: 2.5s;
+}
+
+.typo:nth-child(6){
+    animation-delay: 3s;
+}
+
+
+/* ANIMATION 5 */
+
+.strip{
+    height: 60px;
+    width: 100%;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.box {
+    display: block;
+    width: 40px;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 0;
+    background: yellow;
+    animation-name: go-to-end;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.box:hover {
+    animation-play-state: paused;
+}
+
+@keyframes go-to-end {
+    to {
+        left: calc(100% - 40px);
+    }
+}
