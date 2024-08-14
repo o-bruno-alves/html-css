@@ -284,10 +284,6 @@ body {
     color: rgb(255, 255, 255);
 }
 
-
-
-
-
 .container-articles .container-inner-articles {
     display: flex;
     flex-direction: column;
@@ -483,15 +479,6 @@ footer {
     width: 174px;
     height: 54px;
 }
-
-
-
-
-
-
-
-
-
 
 
 /* Responsive */

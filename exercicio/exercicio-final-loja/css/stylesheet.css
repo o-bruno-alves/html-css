@@ -436,6 +436,10 @@ footer {
   cursor: pointer;
 }
 
+.btn:hover{
+  background: #d6c842
+}
+
 /* Single product page */
 
 
